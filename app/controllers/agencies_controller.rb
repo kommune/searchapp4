@@ -9,12 +9,12 @@ class AgenciesController < ApplicationController
 
   def search
     if params[:search]
-      @agencies = Agency.search ThinkingSphinx::Query.escape(params[:query])
+      @agencies = Agency.search ThinkingSphinx::Query.escape(params[:search])
     else
       @agencies = Agency.all
     end
   end
-  
+
   # GET /agencies/1
   # GET /agencies/1.json
   def show

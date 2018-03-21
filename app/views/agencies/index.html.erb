@@ -2,7 +2,7 @@
 
 <h1>Agencies</h1>
 
-  <%= form_for search_agencies_path, :method => 'get' do %>
+  <%= form_tag search_agencies_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search" %>
